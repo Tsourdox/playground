@@ -68,6 +68,9 @@ function convertToHex(value) {
     return value;
 }
 
+console.log(myLibrary.calculateRectangleArea(5.5, 3.3));
+console.log(myLibrary.calculateTriangleArea(5.5, 3.3));
+console.log(myLibrary.calculateCircleArea(2));
 
 
 
