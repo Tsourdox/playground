@@ -1,14 +1,14 @@
 
 
-function changeBackground() {
-    if (document.body.style.backgroundColor == "white") {
-        document.body.style.backgroundColor = "purple";
-    } else {
+function toggleBackground() {
+    if (document.body.style.backgroundColor == "purple") {
         document.body.style.backgroundColor = "white";
+    } else {
+        document.body.style.backgroundColor = "purple";
     }
 }
 
-function randomizeBackground() {
+function randomizeBackgroundSimple() {
     var randomValue = Math.random();
     if (randomValue < 0.2) {
         document.body.style.backgroundColor = "blue";
@@ -22,6 +22,17 @@ function randomizeBackground() {
         document.body.style.backgroundColor = "yellow";
     }
 }
+
+function randomizeBackgroundWithRGB() {
+    var red = Math.round(Math.random() * 255);
+    var green = Math.round(Math.random() * 255);
+    var blue = Math.round(Math.random() * 255);
+    
+    var rgbValue = "rgb(" + red + ", " + green + ", " + blue + ")";
+    document.body.style.backgroundColor = rgbValue;
+}
+
+// setInterval(randomizeBackgroundPro, 1000);
 
 
 
