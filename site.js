@@ -32,7 +32,41 @@ function randomizeBackgroundWithRGB() {
     document.body.style.backgroundColor = rgbValue;
 }
 
-// setInterval(randomizeBackgroundPro, 1000);
+function randomizeBackgroundWithHex() {
+    var red1 = convertToHex(Math.round(Math.random() * 15));
+    var red2 = convertToHex(Math.round(Math.random() * 15));
+    var green1 = convertToHex(Math.round(Math.random() * 15));
+    var green2 = convertToHex(Math.round(Math.random() * 15));
+    var blue1 = convertToHex(Math.round(Math.random() * 15));
+    var blue2 = convertToHex(Math.round(Math.random() * 15));
+
+    var rgbValue = "#"+red1+red2+green1+green2+blue1+blue2;
+    document.body.style.backgroundColor = rgbValue;
+
+    console.log(rgbValue);
+}
+
+function convertToHex(value) {
+    if (value == 10) {
+        return "A";
+    }
+    if (value == 11) {
+        return "B";
+    }
+    if (value == 12) {
+        return "C";
+    }
+    if (value == 13) {
+        return "D";
+    }
+    if (value == 14) {
+        return "E";
+    }
+    if (value == 15) {
+        return "F";
+    }
+    return value;
+}
 
 
 
